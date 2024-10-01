@@ -68,11 +68,6 @@ struct ContentView: View {
             Spacer()
             
             HStack {
-                Image(systemName: "sunset.fill")
-                    .imageScale(.large)
-                    .bold()
-                    .foregroundStyle(.purple.gradient)
-                
                 VStack(alignment: .leading) {
                     Text("Sunset")
                         .bold()
@@ -80,6 +75,11 @@ struct ContentView: View {
                     Text("6:24 PM")
                         .font(.caption)
                 } // :VStack
+                
+                Image(systemName: "sunset.fill")
+                    .imageScale(.large)
+                    .bold()
+                    .foregroundStyle(.purple.gradient)
             }
             .foregroundStyle(.white)
         } // :HStack
@@ -93,6 +93,7 @@ struct ContentView: View {
         .padding(EdgeInsets(top: 44, leading: 16, bottom: 28, trailing: 16))
         .background(.black.opacity(0.8))
         .clipShape(RoundedRectangle(cornerSize: CGSize(width: 8, height: 8)))
+        .shadow(color: .black.opacity(0.12), radius: 8, y: 4)
         .padding()
     }
     
